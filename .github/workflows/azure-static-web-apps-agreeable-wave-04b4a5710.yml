@@ -36,6 +36,7 @@ jobs:
           db_user: ${{ secrets.DB_USER }}
           db_password: ${{ secrets.DB_PASSWORD }}
           db_database: ${{ secrets.DB_DATABASE }}
+          my_key_to_test: ${{ secrets.MY_KEY_TO_TEST}}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
