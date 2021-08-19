@@ -26,7 +26,7 @@ const executeSQL = (context, sql) => {
         if (err) {
             context.log.error(err);
             context.res.status = 500;
-            context.res.body = "Error connecting to Azure SQL query" + err + " server: " + process.env.db_server + " user: " + process.env.db_user + " - User? - " + process.env.DB_USER;
+            context.res.body = "Error connecting to Azure SQL query" + err + " server: " + process.env.db_server + " user: " + process.env.db_user + " pass: " + process.env.db_password + " db: " + process.env.db_database;
             context.done();
         }
         else {
