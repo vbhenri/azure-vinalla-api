@@ -8,16 +8,16 @@ const executeSQL = (context, sql) => {
     var result = "";
 
     const connection = new Connection({
-        server: process.env["db_server"],
+        server: process.env.db_server,
         authentication: {
             type: 'default',
             options: {
-                userName: process.env["db_user"],
-                password: process.env["db_password"],
+                userName: process.env.db_user,
+                password: process.env.db_password,
             }
         },
         options: {
-            database: process.env["db_database"],
+            database: process.env.db_database,
             encrypt: true
         }
     });
