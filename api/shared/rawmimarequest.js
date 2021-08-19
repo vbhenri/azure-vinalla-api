@@ -26,7 +26,7 @@ const executeSQL = (context, sql) => {
         if (err) {
             context.log.error(err);
             context.res.status = 500;
-            context.res.body = "Error connecting to Azure SQL query";
+            context.res.body = "Error connecting to Azure SQL query" + err;
             context.done();
         }
         else {
